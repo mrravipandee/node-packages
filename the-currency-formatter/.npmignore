@@ -1,0 +1,35 @@
+# Node modules
+node_modules/
+
+# TypeScript build artifacts
+*.tsbuildinfo
+
+# Compiled files (dist folder)
+dist/
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables (shouldn't be uploaded)
+.env
+
+# Tests (if you don't want to publish them)
+test/
+
+# Documentation (Optional, if you don't want to publish your README for instance)
+README.md
+LICENSE
+
+# Package-lock and Yarn lock (Optional, depending on how you publish)
+package-lock.json
+yarn.lock
