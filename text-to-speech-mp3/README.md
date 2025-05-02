@@ -14,13 +14,37 @@ npm install text-to-speech-mp3
 
 ---
 
-## 🚀 Usage
+## 🚀 Quick Usage
+
+You can use this package with either **CommonJS** or **ES Modules**, depending on your setup:
+
+### ✅ CommonJS (default Node.js setup)
+
+```js
+// index.js
+const { textToSpeech } = require('text-to-speech-mp3');
+
+textToSpeech("Hello from CommonJS!", "output");
+```
+
+> No need to change your `package.json`.
+
+---
+
+### ✅ ES Module (import/export syntax)
+
+1. In your `package.json`, add:
+   ```json
+   "type": "module"
+   ```
+
+2. Then in your file:
 
 ```ts
+// index.js
 import { textToSpeech } from 'text-to-speech-mp3';
 
-textToSpeech("Hello, welcome to my project!", "welcome");
-// Creates a file named 'welcome.mp3' in your current directory
+textToSpeech("Hello from ESModule!", "output");
 ```
 
 ---
@@ -31,8 +55,8 @@ textToSpeech("Hello, welcome to my project!", "welcome");
 textToSpeech(text: string, filename: string): Promise<void>
 ```
 
-- **text** – The message to convert into speech.
-- **filename** – The name for the output `.mp3` file (no need to include `.mp3` extension).
+- `text` – The message to convert into speech.
+- `filename` – The name for the output `.mp3` file (no `.mp3` extension needed).
 
 ---
 
@@ -41,10 +65,8 @@ textToSpeech(text: string, filename: string): Promise<void>
 ```
 your-project/
 ├── node_modules/
-├── src/
-│   └── index.ts
-├── dist/
-│   └── output.mp3
+├── index.js
+├── output.mp3
 ├── package.json
 └── README.md
 ```
@@ -53,14 +75,14 @@ your-project/
 
 ## 🌐 Language Support
 
-By default, it uses English (`en`). You can modify the source code to support other [Google Translate TTS languages](https://cloud.google.com/translate/docs/languages).
+By default, it uses English (`en`). You can customize the source to support other [Google Translate TTS languages](https://cloud.google.com/translate/docs/languages).
 
 ---
 
 ## 🛠 Requirements
 
 - Node.js v14+
-- Internet connection (for fetching TTS audio)
+- Internet connection
 
 ---
 
@@ -76,7 +98,8 @@ By default, it uses English (`en`). You can modify the source code to support ot
 ## 👨‍💻 Author
 
 **Ravi Pandey**  
-Helping developers and businesses bring voice to their ideas.
+Helping developers and businesses bring voice to their ideas.  
+[GitHub](https://github.com/mrravipandee)
 
 ---
 
@@ -88,4 +111,4 @@ MIT – Free to use, modify, and distribute.
 
 ## 🤝 Contribute
 
-Found a bug or want a new feature? Feel free to open an issue or submit a pull request.
+Found a bug or want a new feature? Feel free to open an issue or submit a pull request!

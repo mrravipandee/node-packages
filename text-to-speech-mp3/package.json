@@ -1,15 +1,16 @@
 {
   "name": "text-to-speech-mp3",
-  "version": "2.2.0",
+  "version": "2.2.2",
   "description": "A Node.js package that converts text to speech (TTS) and generates MP3 audio files, using the Google Translate API. A simple and efficient solution for adding voice to your projects.",
   "license": "ISC",
   "author": "Ravi Pandey",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "directory": "https://github.com/mrravipandee/node-packages/tree/main/text-to-speech-mp3",
-    "url": "https://github.com/mrravipandee/node-packages.git"
+    "url": "https://github.com/mrravipandee/node-packages.git",
+    "directory": "text-to-speech-mp3"
   },
   "keywords": [
     "text-to-speech",
