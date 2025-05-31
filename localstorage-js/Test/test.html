@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="A modern and beginner-friendly JavaScript localStorage helper utility by Ravi Pandey. Easily store, retrieve, backup, and manage local storage with expiry support and debug tools." />
+    <meta name="author" content="Ravi Pandey" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords"
+        content="localStorage, javascript storage, localStorage helper, js localStorage package, javascript package, storage setItem, getItem, debug storage, localStorage expiry, backup localStorage, restore storage, react localStorage, vue localStorage, angular localStorage, tailwind css, html storage example, Ravi Pandey npm, npm package localstorage, npm package helper, dev utility, web storage, client-side storage, javascript utils, localStorage backup, localStorage restore, localStorage debug, session storage, node package storage, easy localStorage tool, localStorage get with expiry, setItem localStorage js, json localStorage, dev tool, browser storage helper, frontend dev tool, fullstack js utility, react storage tool, vue3 localStorage, angularjs storage, browser api localStorage, cross-browser localStorage, client caching, storage set with expiry, javascript data save, web dev helper, html localStorage demo, storage manager js, js localStorage helper, npm install localstorage-helper, Ravi Pandey dev, @imravidev, localStorage utility package, modern js storage, user session localStorage, javascript object in localStorage, clear storage js, storage debug log, Ravi Pandey npm package, open source storage tool, localStorage persistence, storage expiry timeout, json data storage, localStorage tutorial, easy storage js, save session data, react storage management, vue3 storage management, frontend tools js, efficient localStorage manager, js caching utility, save & load user data, temporary storage js, client state storage, progressive web app storage, localStorage made easy, imravidev helper, browser api utility, js snippet storage" />
+
+    <meta property="og:title" content="LocalStorage Helper - JavaScript Utility by Ravi Pandey" />
+    <meta property="og:description"
+        content="Beginner-friendly JavaScript localStorage utility with expiry, debug, backup, and restore. Useful for React, Angular, Vue, and Vanilla JS apps." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-deployed-demo-link.com/" />
+    <meta property="og:image" content="https://your-deployed-demo-link.com/preview.png" />
+
+    <title>LocalStorage JS by Ravi Pandey | JS Utility</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <header class="bg-gray-700 text-white py-6 shadow-md">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">LocalStorage JS</h1>
+            <p class="text-sm mt-1">A powerful localStorage utility by <a href="https://imravidev.vercel.app/"
+                    target="_blank" class="underline text-yellow-300">Ravi Pandey</a></p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-10">
+        <section class="mb-10 bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold text-gray-800 mb-2">Why Use This Package?</h2>
+            <ul class="list-disc ml-6 text-gray-700 space-y-1">
+                <li><span class="text-yellow-500">Simple API</span> for `setItem`, `getItem`, `clear`, and `backup`</li>
+                <li><span class="text-yellow-500">Set expiry</span> on keys and auto-remove after time</li>
+                <li><span class="text-yellow-500">Backup & Restore</span> localStorage to/from JSON</li>
+                <li><span class="text-yellow-500">Debug</span> versions of set/get with logs</li>
+                <li><span class="text-yellow-500">Works with React, Vue, Angular, Vanilla JS</span></li>
+            </ul>
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Live Demo (Check Console)</h2>
+            <div class="bg-gray-100 p-4 rounded-lg text-sm text-gray-700">
+                <p>Install Package from NPM</p>
+                <pre class="bg-black text-green-400 p-3 rounded mt-2 text-xs overflow-x-auto">
+                    npm install @mrravipandee/localstorage-js
+                </pre>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg text-sm text-gray-700">
+                <p>Use this sample code:</p>
+                <pre class="bg-black text-green-600 p-3 rounded mt-2 text-xs overflow-x-auto">
+                    import { storage } from 'localstorage-js';
+
+                    storage.setItem('user', { name: 'Ravi' });
+                    console.log(storage.getItem('user'));
+
+                    storage.setWithExpiry('token', 'abc123', 5);
+                    console.log(storage.getWithExpiry('token'));
+
+                    const backup = storage.backup();
+                    storage.clear();
+                    storage.restore(backup);
+
+                    storage.debugSet('email', 'imravipanday@gmail.com');
+                    storage.debugGet('email');
+                </pre>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p class="text-sm">
+            Made with ❤️ by
+            <a href="https://imravidev.vercel.app" target="_blank" class="text-yellow-400 underline">Ravi Pandey</a> ·
+            <a href="mailto:imravipanday@gmail.com" class="underline">imravipanday@gmail.com</a>
+        </p>
+    </footer>
+
+    <script type="module">
+        import { storage } from '../src/index.js';
+
+        storage.setItem('user', { name: 'Ravi', role: 'Dev' });
+        storage.setWithExpiry('session', 'abc123', 1);
+        const backupData = storage.backup();
+        storage.clear();
+        storage.restore(backupData);
+        storage.debugSet('email', 'imravipanday@gmail.com');
+        storage.debugGet('email');
+    </script>
+</body>
+
+</html>
